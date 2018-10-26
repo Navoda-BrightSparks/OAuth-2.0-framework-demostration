@@ -5,6 +5,6 @@ Add the client ID and secret to the application.properties
 
 How to Run
 
-Build the project using mvn clean install \n
-Run using mvn spring-boot:run \n
-The web application is accessible via localhost:9002
+Build the project using mvn clean install<br />
+Run using mvn spring-boot:run<br />
+The web application is accessible via localhost:9002<br />
