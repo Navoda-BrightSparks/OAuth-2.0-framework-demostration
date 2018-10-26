@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Form</h1>
-<form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+<form action="#" th:action="@{/email}" th:object="${SenderDetail}" method="post">
     <p>message: <input type="text" th:field="*{message}" /></p>
     <p>sublect: <input type="text" th:field="*{subject}" /></p>
     <p>Email: <input type="text" th:field="*{email}" /></p>
