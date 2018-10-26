@@ -3,14 +3,36 @@
 <head>
     <title>Getting Started: Handling Form Submission</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Form</h1>
-<form action="#" th:action="@{/email}" th:object="${SenderDetail}" method="post">
-    <p>message: <input type="text" th:field="*{message}" /></p>
-    <p>sublect: <input type="text" th:field="*{subject}" /></p>
-    <p>Email: <input type="text" th:field="*{email}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-</form>
+
+
+<div class="container">
+    <h2>Send Email</h2>
+    <form action="#" th:action="@{/email}" th:object="${SenderDetail}" method="post">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" th:field="*{email}"  class="form-control" id="email" placeholder="Enter  recipient email" name="email"/>
+
+        </div>
+        <div class="form-group">
+            <label for="Subject">Subject:</label>
+            <input type="text" th:field="*{subject}"  class="form-control" id="Subject" placeholder="Enter subject" name="Subject" />
+        </div>
+        <div class="form-group">
+            <label for="msg">Message:</label>
+            <textarea  th:field="*{message}"  class="form-control" id="msg" placeholder="Enter Message" name="msg" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="reset" value="Reset" class="btn btn-default" />
+    </form>
+</div>
+
 </body>
 </html>
