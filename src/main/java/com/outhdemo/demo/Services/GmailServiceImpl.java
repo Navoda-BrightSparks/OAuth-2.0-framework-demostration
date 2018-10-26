@@ -20,7 +20,7 @@ import java.util.Properties;
 
 public final class GmailServiceImpl implements GmailService {
 
-    private static final String APPLICATION_NAME = "GmailApiTest";
+    private static final String APPLICATION_NAME = "GmailApiDemo";
 
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 

@@ -55,7 +55,7 @@ public class SendEmailController {
 
 
 
-        return "redirect:/home";
+        return "redirect:/";
     }
 }
 
